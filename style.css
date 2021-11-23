@@ -44,7 +44,7 @@ header {
     flex-wrap: wrap;
     background-color: rgb(105, 105, 105);
     padding: 30px 10px;
-    width: 100%;
+    width: 90%;
     max-width: 1740px;
     max-height: max-content;
     border-radius: 15px;
@@ -60,7 +60,7 @@ header {
     flex-wrap: wrap;
     background-color: rgb(105, 105, 105);
     padding: 30px 10px;
-    width: 100%;
+    width: 90%;
     max-width: 1740px;
     max-height: max-content;
     border-radius: 15px;
