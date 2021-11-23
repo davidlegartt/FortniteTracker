@@ -6,6 +6,7 @@ Fortnite itemshop daily tracker for my girlfriend :D
 - Item's background changes depending on it's rarity
 - Rest of the items from the shop (Featured specials)
 - Fix vBucks icon in item cards
+- Add date in the upper corner
 
 ### Known issues:
 - Duplicate items because of bundles (Sorting issue)
