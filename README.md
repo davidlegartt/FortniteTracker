@@ -1,4 +1,4 @@
-# FortniteTracker WIP
+# Fortnite ItemShop/Stat Tracker WIP
 Fortnite itemshop daily tracker for my girlfriend :D
 
 ### To do:
@@ -7,4 +7,5 @@ Fortnite itemshop daily tracker for my girlfriend :D
 - Rest of the items from the shop (Featured specials)
 - Fix vBucks icon in item cards
 
-PS. This is a personal project with many flaws and ugly/silly code
+PS. This is a personal project with many flaws and ugly/silly code.
+If you're looking for proper tracker there are alot of options on google. :)
