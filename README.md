@@ -6,3 +6,5 @@ Fortnite itemshop daily tracker for my girlfriend :D
 - Item's background changes depending on it's rarity
 - Rest of the items from the shop (Featured specials)
 - Fix vBucks icon in item cards
+
+PS. This is a personal project with many flaws and ugly/silly code
