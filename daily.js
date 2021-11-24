@@ -3,10 +3,16 @@ fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
         $.each(data.data.daily.entries, function(i, item) {
+<<<<<<< HEAD
             if (data.data.daily.entries[i].bundle != null) {
                 return;
             }
             $('body > #cards_daily').append('<div class="card"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>');
+=======
+            console.log(i);
+            $('body > #cards_daily').append('<div class="card"> ' + item.items[0].name + ' <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>');
+            //console.log(item.items[0].rarity.displayValue + " - " + item.items[0].name)
+>>>>>>> b501720125aeaf0465181b1f305f92ce659222dd
         });
     });
 
@@ -15,16 +21,22 @@ fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
         $.each(data.data.featured.entries, function(i, item) {
+<<<<<<< HEAD
             if (data.data.featured.entries[i].bundle != null) {
                 return;
             }
             $('body > #cards_featured').append('<div class="card"> ' + item.items[0].name + ' <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>');
+=======
+            $('body > #cards_featured').append('<div class="card"> ' + item.items[0].name + ' <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>');
+
+>>>>>>> b501720125aeaf0465181b1f305f92ce659222dd
         });
     });
 
 fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
+<<<<<<< HEAD
         $.each(data.data.specialFeatured.entries, function(i, item) {
             if (data.data.specialFeatured.entries[i].bundle != null) {
                 return;
@@ -37,6 +49,25 @@ fetch('https://fortnite-api.com/v2/shop/br')
 (function() {
     var start = new Date;
     start.setHours(2, 0, 0); // 02.00
+=======
+        //Log fetched json
+        console.log(data)
+
+        const test = JSON.stringify(data.data.specialFeatured.entries)
+        const testing = JSON.parse(test);
+        console.log(testing);
+
+        $.each(data.data.specialFeatured.entries, function(i, item) {
+            $('body > #cards_featured_special').append('<div class="card"> ' + item.items[0].name + ' <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>');
+
+        });
+    });
+
+//timer
+(function() {
+    var start = new Date;
+    start.setHours(2, 0, 0); // 11pm
+>>>>>>> b501720125aeaf0465181b1f305f92ce659222dd
 
     function pad(num) {
         return ("0" + parseInt(num)).substr(-2);
@@ -55,5 +86,11 @@ fetch('https://fortnite-api.com/v2/shop/br')
             hh + ":" + mm + ":" + ss;
         setTimeout(tick, 1000);
     }
+<<<<<<< HEAD
     document.addEventListener('DOMContentLoaded', tick);
 }());
+=======
+
+    document.addEventListener('DOMContentLoaded', tick);
+})();
+>>>>>>> b501720125aeaf0465181b1f305f92ce659222dd
