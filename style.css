@@ -28,11 +28,9 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(105, 105, 105);
     padding: 30px 5px;
     width: 100%;
     max-width: 1740px;
-    border-radius: 15px;
     position: relative;
     flex-wrap: wrap;
 }
@@ -182,11 +180,9 @@ footer a {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        background-color: rgb(105, 105, 105);
         padding: 30px;
         width: 90%;
         max-width: 1740px;
-        border-radius: 15px;
         position: relative;
         flex-wrap: wrap;
     }
