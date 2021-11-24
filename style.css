@@ -8,10 +8,12 @@
 }
 
 body {
-    background: rgb(82, 82, 87);
+    background: radial-gradient(#f69d3c, #3f87a6);
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
