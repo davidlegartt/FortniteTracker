@@ -6,13 +6,14 @@ fetch('https://fortnite-api.com/v2/shop/br')
             if (data.data.daily.entries[i].bundle != null) {
                 return;
             }
+            console.log()
             var html = '';
             if (item.items[0].rarity.displayValue) {
                 var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
 
             } else {
-                html = '<div class="card"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
             }
             $('body > #cards_daily').append(html);
         });
@@ -30,10 +31,10 @@ fetch('https://fortnite-api.com/v2/shop/br')
             var html = '';
             if (item.items[0].rarity.displayValue) {
                 var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
 
             } else {
-                html = '<div class="card"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
             }
             $('body > #cards_featured').append(html);
         });
@@ -49,10 +50,10 @@ fetch('https://fortnite-api.com/v2/shop/br')
             var html = '';
             if (item.items[0].rarity.displayValue) {
                 var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
 
             } else {
-                html = '<div class="card"> <b>' + item.items[0].name + '</b> <br> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + ' <br> ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
             }
             $('body > #cards_featured_special').append(html);
         });
@@ -88,22 +89,22 @@ function fetchbackGround(rarity) {
     var background = "rgb(148, 148, 150)";
     switch (rarity) {
         case "Common":
-            background = "radial-gradient(#d0d0d0 0%,#6d7071 100%)";
+            background = "radial-gradient(#d0d0d0 0%,#6d7071 100%)"; //Grey
             break;
         case "Uncommon":
-            background = "radial-gradient(#5bad03 0%,#01700a 100%)";
+            background = "radial-gradient(#5bad03 0%,#01700a 100%)"; //Green
             break;
         case "Rare":
-            background = "radial-gradient(#3dc7ff 0%,#0059a1 100%)";
+            background = "radial-gradient(#3dc7ff 0%,#0059a1 100%)"; //Blue
             break;
         case "Epic":
-            background = "radial-gradient(#d27bf4 0%,#7907a5 100%)";
+            background = "radial-gradient(#d27bf4 0%,#7907a5 100%)"; //Purple
             break;
         case "Legendary":
-            background = "radial-gradient(#fb9625 0%,#875134 100%)";
+            background = "radial-gradient(#fb9625 0%,#875134 100%)"; //Gold
             break;
         case "Icon Series":
-            background = "#00FFFF";
+            background = "radial-gradient(#36b7b7 0%,#256b6b 100%"; //Cyan
             break;
     }
     return background;
