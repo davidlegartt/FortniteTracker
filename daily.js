@@ -6,7 +6,6 @@ fetch('https://fortnite-api.com/v2/shop/br')
             if (data.data.daily.entries[i].bundle != null) {
                 return;
             }
-            console.log()
             var html = '';
             if (item.items[0].rarity.displayValue) {
                 var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
@@ -19,27 +18,7 @@ fetch('https://fortnite-api.com/v2/shop/br')
         });
     });
 
-
-//Featured offers
-fetch('https://fortnite-api.com/v2/shop/br')
-    .then(res => res.json())
-    .then(data => {
-        $.each(data.data.featured.entries, function(i, item) {
-            if (data.data.featured.entries[i].bundle != null) {
-                return;
-            }
-            var html = '';
-            if (item.items[0].rarity.displayValue) {
-                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-
-            } else {
-                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-            }
-            $('body > #cards_featured').append(html);
-        });
-    });
-
+//Special featured
 fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
@@ -58,6 +37,28 @@ fetch('https://fortnite-api.com/v2/shop/br')
             $('body > #cards_featured_special').append(html);
         });
     });
+
+//Featured offers
+fetch('https://fortnite-api.com/v2/shop/br')
+    .then(res => res.json())
+    .then(data => {
+        $.each(data.data.featured.entries, function(i, item) {
+            if (data.data.featured.entries[i].bundle != null) {
+                return;
+            }
+            console.log(item.items[0].rarity.displayValue + " - " + item.items[0].name)
+            var html = '';
+            if (item.items[0].rarity.displayValue) {
+                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
+                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+
+            } else {
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+            }
+            $('body > #cards_featured').append(html);
+        });
+    });
+
 
 //Timer
 (function() {
@@ -104,7 +105,10 @@ function fetchbackGround(rarity) {
             background = "radial-gradient(#fb9625 0%,#875134 100%)"; //Gold
             break;
         case "Icon Series":
-            background = "radial-gradient(#36b7b7 0%,#256b6b 100%"; //Cyan
+            background = "radial-gradient(#36b7b7 0%,#256b6b 100%)"; //Cyan
+            break;
+        case "MARVEL SERIES":
+            background = "radial-gradient(#cf5d5d 0%,#ac0303 100%)"; //Cyan
             break;
     }
     return background;
