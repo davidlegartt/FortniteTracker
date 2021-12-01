@@ -1,5 +1,6 @@
 # Fortnite ItemShop/Stat Tracker WIP
 Fortnite itemshop daily tracker for my girlfriend :D
+
 ##Link : https://davidlegartt.github.io/FortniteTracker/
 
 ### To do:
