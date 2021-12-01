@@ -1,65 +1,3 @@
-//Daily offers
-fetch('https://fortnite-api.com/v2/shop/br')
-    .then(res => res.json())
-    .then(data => {
-        $.each(data.data.daily.entries, function(i, item) {
-            if (data.data.daily.entries[i].bundle != null) {
-                return;
-            }
-            var html = '';
-            if (item.items[0].rarity.displayValue) {
-                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-
-            } else {
-                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-            }
-            $('body > #cards_daily').append(html);
-        });
-    });
-
-//Special featured
-fetch('https://fortnite-api.com/v2/shop/br')
-    .then(res => res.json())
-    .then(data => {
-        $.each(data.data.specialFeatured.entries, function(i, item) {
-            if (data.data.specialFeatured.entries[i].bundle != null) {
-                return;
-            }
-            var html = '';
-            if (item.items[0].rarity.displayValue) {
-                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-
-            } else {
-                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-            }
-            $('body > #cards_featured_special').append(html);
-        });
-    });
-
-//Featured offers
-fetch('https://fortnite-api.com/v2/shop/br')
-    .then(res => res.json())
-    .then(data => {
-        $.each(data.data.featured.entries, function(i, item) {
-            if (data.data.featured.entries[i].bundle != null) {
-                return;
-            }
-            console.log(item.items[0].rarity.displayValue + " - " + item.items[0].name)
-            var html = '';
-            if (item.items[0].rarity.displayValue) {
-                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
-                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-
-            } else {
-                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
-            }
-            $('body > #cards_featured').append(html);
-        });
-    });
-
-
 //Timer
 (function() {
     var start = new Date;
@@ -110,7 +48,72 @@ function fetchbackGround(rarity) {
         case "MARVEL SERIES":
             background = "radial-gradient(#cf5d5d 0%,#ac0303 100%)"; //Cyan
             break;
+        case "DARK SERIES":
+            background = "url(img/dark_series.webp) no-repeat; background-size: cover; "; //Cyan
+            break;
+            //radial-gradient(#cf5d5d 0%,#ac0303 100%)
+            //<div class="card"  style="background:' radial-gradient(#cf5d5d 0%,#ac0303 100%) '">
     }
     return background;
 }
-//background-image: radial-gradient(#d27bf4 0%,#7907a5 100%)
+
+//Daily offers
+fetch('https://fortnite-api.com/v2/shop/br')
+    .then(res => res.json())
+    .then(data => {
+        $.each(data.data.daily.entries, function(i, item) {
+            if (data.data.daily.entries[i].bundle != null) {
+                return;
+            }
+            var html = '';
+            if (item.items[0].rarity.displayValue) {
+                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
+                html = '<div class="card"  style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px" > </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+
+            } else {
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+            }
+            $('body > #cards_daily').append(html);
+        });
+    });
+
+//Special featured
+fetch('https://fortnite-api.com/v2/shop/br')
+    .then(res => res.json())
+    .then(data => {
+        $.each(data.data.specialFeatured.entries, function(i, item) {
+            if (data.data.specialFeatured.entries[i].bundle != null) {
+                return;
+            }
+            var html = '';
+            if (item.items[0].rarity.displayValue) {
+                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
+                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+
+            } else {
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+            }
+            $('body > #cards_featured_special').append(html);
+        });
+    });
+
+//Featured offers
+fetch('https://fortnite-api.com/v2/shop/br')
+    .then(res => res.json())
+    .then(data => {
+        $.each(data.data.featured.entries, function(i, item) {
+            console.log(item.items[0].rarity.displayValue + "--" + item.items[0].name);
+            if (data.data.featured.entries[i].bundle != null) {
+                return;
+            }
+            var html = '';
+            if (item.items[0].rarity.displayValue) {
+                var bgcolorforDiv = fetchbackGround(item.items[0].rarity.displayValue);
+                html = '<div class="card" style="background:' + bgcolorforDiv + '"> <span id="name"> <b>' + item.items[0].name + '</b> </span> <span id="price">' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+
+            } else {
+                html = '<div class="card"> <span id="name"> <b>' + item.items[0].name + '</b> </span>  <span>' + item.finalPrice + '<img id="v_buck" src="https://fortnite-api.com/images/vbuck.png" height="28px"> </span>' + '  ' + '<img id="image" src="' + item.items[0].images.icon + '"></img>' + '</div>';
+            }
+            $('body > #cards_featured').append(html);
+        });
+    });
