@@ -49,10 +49,11 @@ function fetchbackGround(rarity) {
             background = "radial-gradient(#cf5d5d 0%,#ac0303 100%)"; //Cyan
             break;
         case "DARK SERIES":
-            background = "url(img/dark_series.webp) no-repeat; background-size: cover; "; //Cyan
+            background = "url(img/dark_series.webp) no-repeat; background-size: cover; "; //Dark series image
             break;
-            //radial-gradient(#cf5d5d 0%,#ac0303 100%)
-            //<div class="card"  style="background:' radial-gradient(#cf5d5d 0%,#ac0303 100%) '">
+        case "Shadow Series":
+            background = "url(img/shadow_series.webp) no-repeat; background-size: cover; "; //Shadow series image
+            break;
     }
     return background;
 }
@@ -82,6 +83,7 @@ fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
         $.each(data.data.specialFeatured.entries, function(i, item) {
+            //console.log(item.items[0].rarity.displayValue + "--" + item.items[0].name);
             if (data.data.specialFeatured.entries[i].bundle != null) {
                 return;
             }
@@ -102,7 +104,7 @@ fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
         $.each(data.data.featured.entries, function(i, item) {
-            console.log(item.items[0].rarity.displayValue + "--" + item.items[0].name);
+
             if (data.data.featured.entries[i].bundle != null) {
                 return;
             }
