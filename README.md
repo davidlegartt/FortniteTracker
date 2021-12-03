@@ -1,6 +1,8 @@
 # Fortnite ItemShop/Stat Tracker WIP
 Fortnite itemshop daily tracker for my girlfriend :D
 
+## Link : https://davidlegartt.github.io/FortniteTracker/
+
 ### To do:
 - Fortnite stats search with username
 - ~~Item's background changes depending on it's rarity~~
