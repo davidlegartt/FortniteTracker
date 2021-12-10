@@ -3,138 +3,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @font-face {
     font-family: Fortnite;
-    src: url('fortnite.otf');
+    src: url('fonts/fortnite.otf');
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background: radial-gradient(#3dc7ff 0%, #0059a1 100%)
-}
-
-header {
-    margin-top: 15px;
-    font-family: 'Fortnite', Arial;
-    font-size: 25px;
-    height: 100px;
-    text-align: center;
-    color: white;
-}
-
-#cards_daily,
-#cards_featured,
-#cards_featured_special {
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-top: 160px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px 5px;
-    width: 100%;
-    max-width: 1740px;
-    position: relative;
-    flex-wrap: wrap;
-    border-radius: 15px;
-}
-
-#OTSIKKO {
-    font-family: 'Fortnite', Arial;
-    font-size: 3rem;
-    position: absolute;
-    top: -91px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: max-content;
-    padding: 0px 10px;
-    border-radius: 10px 10px 0px 0px;
-    color: white;
-}
-
-.timer {
-    font-family: 'Monospace', Arial;
-    position: absolute;
-    font-size: 15px;
-    top: -33px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    color: white;
-    width: 290px;
-    padding: 5px 5px 10px;
-    border-radius: 10px 10px 0px 0px;
-    text-align: center;
-    display: block;
-    font-weight: 700;
-}
-
-.card {
-    display: flex;
-    background-color: rgb(148, 148, 150);
-    width: 160px;
-    height: 240px;
-    border-radius: 15px;
-    padding: 10px 0px 0px 0px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    font-family: 'Poppins', Arial;
-    font-size: 1rem;
-    margin: 15px 10px;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-    text-align: center;
-    overflow: hidden;
-    transition: box-shadow 0.2s;
-}
-
-.card:hover {
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
-}
-
-.card span {
-    display: flex;
-    height: 64px;
-    align-items: stretch;
-}
-
-#name {
-    align-items: center;
-}
-
-#v_buck {
-    margin-left: 5px;
-}
-
-#image {
-    max-height: 160px;
-    max-width: 100%;
-}
-
-footer {
-    padding: 10px;
-    font-family: 'Indie Flower', Helvetica, sans-serif;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
+@media only screen and (max-width: 768px) {
+    *,
+    *::after,
+    *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background: radial-gradient(#3dc7ff 0%, #0059a1 100%)
+    }
+    header {
+        margin-top: 15px;
+        font-family: 'Fortnite', Arial;
+        font-size: 25px;
+        height: 100px;
+        text-align: center;
+        color: white;
+    }
+    #cards_daily,
+    #cards_featured,
+    #cards_featured_special {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 160px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 30px 5px;
+        width: 100%;
+        max-width: 1740px;
+        position: relative;
+        flex-wrap: wrap;
+        border-radius: 15px;
+    }
+    #OTSIKKO {
+        font-family: 'Fortnite', Arial;
+        font-size: 3rem;
+        position: absolute;
+        top: -91px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: max-content;
+        padding: 0px 10px;
+        border-radius: 10px 10px 0px 0px;
+        color: white;
+    }
+    .timer {
+        font-family: 'Monospace', Arial;
+        position: absolute;
+        font-size: 15px;
+        top: -33px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        color: white;
+        width: 290px;
+        padding: 5px 5px 10px;
+        border-radius: 10px 10px 0px 0px;
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+    .card {
+        display: flex;
+        background-color: rgb(148, 148, 150);
+        width: 160px;
+        height: 240px;
+        border-radius: 15px;
+        padding: 10px 0px 0px 0px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-family: 'Poppins', Arial;
+        font-size: 1rem;
+        margin: 15px 10px;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        text-align: center;
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+    }
+    .card:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+    }
+    .card span {
+        display: flex;
+        height: 64px;
+        align-items: stretch;
+    }
+    #name {
+        align-items: center;
+    }
+    #v_buck {
+        margin-left: 5px;
+    }
+    #image {
+        max-height: 160px;
+        max-width: 100%;
+    }
+    footer {
+        padding: 10px;
+        font-family: 'Indie Flower', Helvetica, sans-serif;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+    .statcard {
+        margin-top: 100px;
+        display: flex;
+        height: 460px;
+        width: 800px;
+        /* background-color: blue; */
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        /* background: url(img/stat_bg.webp); */
+        background-size: cover;
+    }
+    .overall {
+        width: 40%;
+        height: 440px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        flex-direction: column;
+        border-radius: 10px;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+    .overall h1 {
+        font-family: Fortnite, 'Arial';
+        font-size: 3rem;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .row {
+        display: flex;
+        font-size: 1.4rem;
+    }
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        margin: 0 5px;
+        color: white;
+        font-family: 'Poppins', Helvetica, sans-serif;
+        align-items: center;
+    }
+    .modes {
+        display: flex;
+        width: 55%;
+        height: 440px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .stat {
+        width: 100%;
+        height: 32%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        font-family: 'Poppins', Helvetica, sans-serif;
+        flex-wrap: wrap;
+    }
+    .stat_value {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .numbers p:after {
+        content: '.';
+        visibility: hidden;
+    }
+    .mode_numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px 0px;
+    }
+    .stat_response {
+        margin-top: 50px;
+    }
 }
 
 
@@ -150,7 +221,7 @@ footer a {
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
         background-attachment: fixed;
         background: radial-gradient(#3dc7ff 0%, #0059a1 100%)
     }
@@ -161,6 +232,7 @@ footer a {
         text-align: center;
         color: white;
         margin-top: 30px;
+        letter-spacing: 1px;
     }
     #cards_daily,
     #cards_featured,
@@ -243,9 +315,86 @@ footer a {
         text-align: center;
         text-decoration: none;
         color: white;
+        bottom: 0px;
+        margin-top: 5%;
     }
     footer a {
         text-decoration: none;
         color: white;
     }
+    .statcard {
+        margin-top: 100px;
+        display: flex;
+        height: 460px;
+        width: 800px;
+        /* background-color: blue; */
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        background: url(img/stat_bg.webp);
+        background-size: cover;
+    }
+    .overall {
+        width: 40%;
+        height: 440px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        flex-direction: column;
+        border-radius: 10px;
+        justify-content: space-evenly;
+    }
+    .overall h1 {
+        font-family: Fortnite, 'Arial';
+        font-size: 3rem;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .row {
+        display: flex;
+        font-size: 1.4rem;
+    }
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        margin: 0 5px;
+        color: white;
+        font-family: 'Poppins', Helvetica, sans-serif;
+        align-items: center;
+    }
+    .modes {
+        display: flex;
+        width: 55%;
+        height: 440px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .stat {
+        width: 100%;
+        height: 32%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        font-family: 'Poppins', Helvetica, sans-serif;
+    }
+    .stat_value {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+
+.numbers p:after {
+    content: '.';
+    visibility: hidden;
+}
+
+.mode_numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
