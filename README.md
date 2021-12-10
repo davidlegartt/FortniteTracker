@@ -5,11 +5,11 @@ Fortnite itemshop daily tracker for my girlfriend :D
 
 ### To do:
 - Fortnite stats search with username
+- Add date in the upper corner
 - ~~Item's background changes depending on it's rarity~~
 - ~~Rest of the items from the shop (Featured specials)~~
 - ~~Fix vBucks icon in item cards~~
-- Add date in the upper corner
-- Proper mobile UI
+- ~~Proper mobile UI~~
 
 ### Known issues:
 - ~~Duplicate items because of bundles (Sorting issue)~~
