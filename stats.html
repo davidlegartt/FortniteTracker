@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--KOKEILU-->
     <script type="module" defer src="stats.js"></script>
     <script defer src="jquery-3.6.0.js"></script>
@@ -71,7 +71,9 @@
         </div>
         <div class="modes">
             <div class="stat solo">
-
+                <div class="gamemode">
+                    <h1 class="gamemode">Solo</h1>
+                </div>
                 <div class="mode_numbers">
                     <p class="stat_value" id="solo_matches"></p>
                     <p>Matches</p>
@@ -102,6 +104,9 @@
                 </div>
             </div>
             <div class="stat duo">
+                <div class="gamemode">
+                    <h1 class="gamemode">Duo</h1>
+                </div>
                 <div class="mode_numbers">
                     <p class="stat_value" id="duo_matches"></p>
                     <p>Matches</p>
@@ -132,6 +137,9 @@
                 </div>
             </div>
             <div class="stat squad">
+                <div class="gamemode">
+                    <h1 class="gamemode">Squad</h1>
+                </div>
                 <div class="mode_numbers">
                     <p class="stat_value" id="squad_matches"></p>
                     <p>Matches</p>
@@ -167,6 +175,8 @@
 
     <footer>
         <a href="https://github.com/davidlegartt/fortnitetracker"> <img src="img/GitHub-Mark-Light-32px.png"> </a>
+        <a id="link" href="index.html"> Shop </a>
+        <a id="link" href="stats.html"> Stats </a>
 
         <p>Made by McDreamyh :)</p>
     </footer>
