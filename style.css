@@ -6,26 +6,165 @@
     src: url('fonts/fortnite.otf');
 }
 
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: radial-gradient(#3dc7ff 0%, #0059a1 100%);
+    min-height: 100vh;
+}
+
+.card span {
+    display: flex;
+    height: 64px;
+    align-items: stretch;
+}
+
+#name {
+    align-items: center;
+}
+
+#v_buck {
+    margin-left: 5px;
+}
+
+.overall h1 {
+    font-family: Fortnite, 'Arial';
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.row {
+    display: flex;
+    font-size: 1.4rem;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    color: white;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    align-items: center;
+}
+
+.stat {
+    width: 100%;
+    height: 32%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.stat_value {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.numbers p:after {
+    content: '.';
+    visibility: hidden;
+}
+
+.gamemode {
+    font-family: 'Fortnite', Arial;
+    letter-spacing: 1px;
+}
+
+.statcard {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.stat_response {
+    margin-top: 50px;
+    display: flex;
+}
+
+.stat_response #playerName {
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Fortnite', Arial;
+    text-align: center;
+}
+
+.stat_response #getName {
+    margin-left: 20px;
+    width: auto;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 10px;
+    background: rgb(71, 112, 247);
+    color: white;
+    font-weight: 400;
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+#playerName,
+#getName {
+    user-select: text;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.menu {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+}
+
+.menu #link {
+    font-size: 1.4rem;
+}
+
+.menu #link:hover {
+    color: salmon;
+}
+
+#cards_featured {
+    margin-bottom: 100px;
+}
+
 
 /*MOBILE*/
 
 @media only screen and (max-width: 768px) {
-    *,
-    *::after,
-    *::before {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    body {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-repeat: repeat;
-        background-attachment: fixed;
-        background: radial-gradient(#3dc7ff 0%, #0059a1 100%);
-        height: auto;
-    }
     header {
         margin-top: 15px;
         font-family: 'Fortnite', Arial;
@@ -97,61 +236,24 @@
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
         text-align: center;
         overflow: hidden;
-        transition: box-shadow 0.2s;
-    }
-    .card:hover {
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
-    }
-    .card span {
-        display: flex;
-        height: 64px;
-        align-items: stretch;
-    }
-    #name {
-        align-items: center;
-    }
-    #v_buck {
-        margin-left: 5px;
     }
     #image {
         max-height: 160px;
         max-width: 100%;
-    }
-    footer {
-        padding: 10px;
-        font-family: 'Indie Flower', Helvetica, sans-serif;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        margin-top: 0px;
-        display: flex;
-        flex-direction: column;
-    }
-    footer a {
-        text-decoration: none;
-        color: white;
-    }
-    footer #link {
-        font-size: 1.4rem;
-    }
-    footer #link:hover {
-        font-size: 1.4rem;
-        color: salmon;
     }
     .statcard {
         margin-top: 20px;
         display: flex;
         height: auto;
         width: 100vw;
-        /* background-color: blue; */
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         padding: 10px;
-        /* background: url(img/stat_bg.webp); */
         background-size: cover;
+    }
+    .stat_value {
+        font-size: 1.2rem;
     }
     .overall {
         width: 100%;
@@ -165,24 +267,6 @@
         justify-content: space-evenly;
         margin-bottom: 10px;
     }
-    .overall h1 {
-        font-family: Fortnite, 'Arial';
-        font-size: 3rem;
-        color: white;
-        letter-spacing: 1px;
-    }
-    .row {
-        display: flex;
-        font-size: 1.4rem;
-    }
-    .numbers {
-        display: flex;
-        flex-direction: column;
-        margin: 0 5px;
-        color: white;
-        font-family: 'Poppins', Helvetica, sans-serif;
-        align-items: center;
-    }
     .modes {
         display: flex;
         width: 100%;
@@ -190,59 +274,11 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    .stat {
-        width: 100%;
-        height: 32%;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        color: white;
-        font-family: 'Poppins', Helvetica, sans-serif;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .stat_value {
-        font-weight: 700;
-        font-size: 1.2rem;
-    }
-    .numbers p:after {
-        content: '.';
-        visibility: hidden;
-    }
     .mode_numbers {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 5px 0px;
-    }
-    .stat_response {
-        margin-top: 50px;
-        display: flex;
-    }
-    .gamemode {
-        font-family: 'Fortnite', Arial;
-        letter-spacing: 1px;
-    }
-    .stat_response #playerName {
-        height: 40px;
-        font-size: 1.5rem;
-        border-radius: 10px;
-        border: 0;
-        font-family: 'Fortnite', Arial;
-        text-align: center;
-    }
-    .stat_response #getName {
-        margin-left: 8px;
-        width: auto;
-        padding: 0 5px;
-        border: 0;
-        border-radius: 10px;
-        background: rgb(71, 112, 247);
-        color: white;
-        font-weight: 400;
-        font-family: 'Poppins', Helvetica, sans-serif;
     }
 }
 
@@ -250,21 +286,6 @@
 /*DESKTOP*/
 
 @media only screen and (min-width: 768px) {
-    *,
-    *::before,
-    *::after {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    body {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background: radial-gradient(#3dc7ff 0%, #0059a1 100%)
-    }
     header {
         font-family: 'Fortnite', Arial;
         font-size: 45px;
@@ -333,50 +354,22 @@
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
         text-align: center;
         overflow: hidden;
+        transition: box-shadow 0.2s;
     }
-    .card span {
-        display: flex;
-        height: 64px;
-        align-items: stretch;
-    }
-    #name {
-        align-items: center;
-    }
-    #v_buck {
-        margin-left: 5px;
+    .card:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
     }
     #image {
         max-height: 230px;
         max-width: 100%;
     }
-    footer {
-        padding: 10px;
-        font-family: 'Indie Flower', Helvetica, sans-serif;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        bottom: 0px;
-        margin-top: 5%;
-        display: flex;
-        flex-direction: column;
-    }
-    footer a {
-        text-decoration: none;
-        color: white;
-    }
-    footer #link {
-        font-size: 1.4rem;
-    }
-    footer #link:hover {
-        font-size: 1.4rem;
-        color: salmon;
-    }
     .statcard {
-        margin-top: 100px;
+        margin-top: 50px;
         display: flex;
         height: 460px;
         width: 800px;
-        /* background-color: blue; */
         justify-content: space-around;
         align-items: center;
         padding: 10px;
@@ -395,24 +388,6 @@
         border-radius: 10px;
         justify-content: space-evenly;
     }
-    .overall h1 {
-        font-family: Fortnite, 'Arial';
-        font-size: 3rem;
-        color: white;
-        letter-spacing: 1px;
-    }
-    .row {
-        display: flex;
-        font-size: 1.4rem;
-    }
-    .numbers {
-        display: flex;
-        flex-direction: column;
-        margin: 0 5px;
-        color: white;
-        font-family: 'Poppins', Helvetica, sans-serif;
-        align-items: center;
-    }
     .modes {
         display: flex;
         width: 55%;
@@ -420,58 +395,10 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    .stat {
-        width: 100%;
-        height: 32%;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        color: white;
-        font-family: 'Poppins', Helvetica, sans-serif;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .stat_value {
-        font-weight: 700;
-        font-size: 1.5rem;
-    }
-    .numbers p:after {
-        content: '.';
-        visibility: hidden;
-    }
     .mode_numbers {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .gamemode {
-        font-family: 'Fortnite', Arial;
-        letter-spacing: 1px;
-    }
-    .stat_response {
-        margin-top: 50px;
-        display: flex;
-    }
-    .stat_response #playerName {
-        height: 40px;
-        font-size: 1.5rem;
-        border-radius: 10px;
-        border: 0;
-        font-family: 'Fortnite', Arial;
-        text-align: center;
-    }
-    .stat_response #getName {
-        margin-left: 8px;
-        width: auto;
-        padding: 0 5px;
-        border: 0;
-        border-radius: 10px;
-        background: rgb(71, 112, 247);
-        color: white;
-        font-weight: 400;
-        font-family: 'Poppins', Helvetica, sans-serif;
     }
     .stat_response #getName:hover {
         cursor: pointer;
