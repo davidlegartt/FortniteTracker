@@ -60,6 +60,9 @@ function fetchbackGround(rarity) {
         case "Gaming Legends Series":
             background = "url(img/gaming_legends_series.webp) no-repeat; background-size: cover; "; //Shadow series image
             break;
+        case "Lava Series":
+            background = "url(img/lava_series.webp) no-repeat; background-size: cover; "; //Shadow series image
+            break;
     }
     return background;
 }
@@ -89,7 +92,7 @@ fetch('https://fortnite-api.com/v2/shop/br')
     .then(res => res.json())
     .then(data => {
         $.each(data.data.specialFeatured.entries, function(i, item) {
-            //console.log(item.items[0].rarity.displayValue + "--" + item.items[0].name);
+            console.log(item.items[0].rarity.displayValue + "--" + item.items[0].name);
             if (data.data.specialFeatured.entries[i].bundle != null) {
                 return;
             }
