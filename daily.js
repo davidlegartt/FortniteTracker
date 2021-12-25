@@ -63,6 +63,9 @@ function fetchbackGround(rarity) {
         case "Lava Series":
             background = "url(img/lava_series.webp) no-repeat; background-size: cover; "; //Shadow series image
             break;
+        case "Star Wars Series":
+            background = "url(img/starwars_series.webp) no-repeat; background-size: cover; "; //Shadow series image
+            break;    
     }
     return background;
 }
