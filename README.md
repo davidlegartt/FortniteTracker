@@ -1,8 +1,7 @@
 # Fortnite ItemShop/Stat Tracker WIP
 Fortnite itemshop daily tracker for my girlfriend :D
 
-## Link : https://davidlegartt.github.io/FortniteTracker/
-
+## Link : https://mcdreamyh.github.io/FortniteTracker/
 ### To do:
 - Implement clickable cards with item data
 - Add date in the upper corner
