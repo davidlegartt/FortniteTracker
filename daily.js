@@ -1,7 +1,7 @@
 //Timer
 (function() {
     var start = new Date;
-    start.setHours(2, 0, 0); // 02.00
+    start.setHours(3, 0, 0); // 02.00
 
     function pad(num) {
         return ("0" + parseInt(num)).substr(-2);
