@@ -13,6 +13,7 @@ Fortnite itemshop daily tracker for my girlfriend :D
 
 ### Known issues:
 - ~~Duplicate items because of bundles (Sorting issue)~~
+- Broken stats. RIP
 
 PS. This is a personal project with many flaws and ugly/silly code.
 If you're looking for proper tracker there are alot of options on google. :)
