@@ -94,7 +94,7 @@ fetch('https://fortnite-api.com/v2/shop/br')
     });
 
 //Special featured
-fetch('https://fortnite-api.com/v2/shop/br')
+fetch('https://fortnite-api.com/v2/shop/')
     .then(res => res.json())
     .then(data => {
         $.each(data.data.specialFeatured.entries, function(i, item) {
